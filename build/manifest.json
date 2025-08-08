@@ -1,0 +1,25 @@
+{
+  "name": "Entry OverRes",
+  "description": "엔트리 작품에서 이미지·소리를 원본 그대로 업로드해 줍니다.",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "content_scripts": [{
+    "matches": [
+      "https://playentry.org/ws/*",
+      "https://playentry.org/discovery/*/ws"
+    ],
+    "js": ["dist/index.js"],
+    "world": "MAIN"
+  }],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{4225b05c-0de1-42d3-aede-5b1ee2e41e7c}"
+    }
+  }
+}
