@@ -57,6 +57,7 @@ async function send(this: XMLHttpRequest, body: FormData) {
   })
 
   this.dispatchEvent(new Event('readystatechange'))
+  this.dispatchEvent(new Event('loadend'))
 }
 
 const originalSend = XMLHttpRequest.prototype.send
